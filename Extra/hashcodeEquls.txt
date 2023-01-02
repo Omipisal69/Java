@@ -1,0 +1,90 @@
+
+import java.util.*;
+
+import SortDemo_I.Employee;
+ class MyEmployee {
+	int eid;
+	String name;
+	double salary;
+	int deptid;
+	public MyEmployee(int eid, String name, double salary, int deptid) {
+		super();
+		this.eid = eid;
+		this.name = name;
+		this.salary = salary;
+		this.deptid = deptid;
+	}
+	@Override
+	public String toString() {
+		return "Employee [eid=" + eid + ", name=" + name + ", salary=" + salary + ", deptid=" + deptid + "]";
+	}
+	public int getEid() {
+		return eid;
+	}
+	public int getDeptid() {
+		return deptid;
+	}
+	public MyEmployee()
+	{
+		
+	}
+	@Override
+	public int hashCode() {
+		
+		return deptid;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		MyEmployee temp=(MyEmployee)obj;
+		boolean flag=false;
+		if(this.eid!=temp.eid)
+			flag=false;
+		else if(this.deptid==temp.deptid)
+			flag=true;
+		return flag;
+		
+		
+			}
+	
+	
+	
+}
+public class DemoHashCode {
+public static void main(String[] args) {
+	/*MyEmployee e1=new MyEmployee(101,"Seeta",5000,10);
+	MyEmployee e2=new MyEmployee(101,"Seeta",5000,10);
+	System.out.println("---------- Equal ------------");
+	System.out.println(" Equal Employee "+e1.equals(e2));
+	System.out.println(" Hashcode of e1 "+e1.hashCode());
+	System.out.println(" Hashcode of e2 "+e2.hashCode());
+	
+	MyEmployee obj1=new MyEmployee(102,"Geeta",3443,54);
+	MyEmployee obj2=obj1;
+	System.out.println("---------- Equal ------------");
+	System.out.println(" Equal Employee "+obj1.equals(obj2));
+	System.out.println(" Hashcode of e1 "+obj1.hashCode());
+	System.out.println(" Hashcode of e2 "+obj2.hashCode());*/
+	
+	Set<MyEmployee> emp=new HashSet<MyEmployee>();
+	emp.add(new MyEmployee(11,"Bb",555,10));
+	emp.add(new MyEmployee(4,"Bb",555,40));
+	emp.add(new MyEmployee(13,"Bb",555,20));
+	emp.add(new MyEmployee(8,"Bb",555,10));
+	emp.add(new MyEmployee(3,"Bb",555,40));
+	emp.add(new MyEmployee(2,"Bb",555,20));
+	
+	for(MyEmployee e:emp)
+		System.out.println(e);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+}

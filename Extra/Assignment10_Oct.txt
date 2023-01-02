@@ -1,0 +1,48 @@
+******************************* Inheritance *****************
+class Point
+{
+    int x,y;
+}
+class ColorPoint extends Point
+{
+   String color;
+   public static String []colors;
+   static
+  {
+      colors=new String[5];
+      colors[0]="Green";
+      colors[1]="Red";
+      colors[2]="Blue";
+  }
+  public ColorPoint(int x,int y,String col)
+ {
+    super(x,y);
+    for(int i=0';i<5;i++)
+    {
+       if(col.equals(colors[i])
+        {
+          color=col;
+           } 
+    }
+}
+
+
+
+}
+
+ColorPoint cp1=new ColorPoint(10,20,"Green");
+ColorPoint cp1=new ColorPoint(10,20,"Yellow");
+
+************************* Polymorphism ******************
+class Person			class Employee:Person
+{				{
+    String name,address;	   eid,salary	
+}                               }
+class SalesManager:Employee		class Programmer:employee		class Admin:Employee
+{
+   	 public void calculateSal();		 public void calculateSal();		 public void calculateSal();
+}
+   
+
+
+
